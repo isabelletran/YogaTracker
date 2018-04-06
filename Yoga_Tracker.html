@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CorePower Yoga Tracker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.header {
+	background-image: url("header_image.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right center;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+p {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+form {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+input {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+body {
+	background-image: url("background_image.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+select {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+input[type=submit] {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+    color: #fff;
+    background: orange;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+</style>
+</head>
+<body>
+
+<div class = "header">
+	<h1>Class Tracker</h1>
+</div>
+
+
+<form action="/output.php" method="POST">
+  Date and Time of Class: 
+  <input type="date" name="date_of_class">
+  <br><br>
+  Time of Class:
+  <input type="time" name="time_of_class">
+
+
+	<p>Instructor: 
+	<select name="instructor">
+	  <option value="Abby_P">Abby P</option>
+	  <option value="Alexis_H">Alexis H</option>
+	  <option value="Alison_Ur">Alison Ur</option>
+	  <option value="Ally_R">Ally R</option>
+	  <option value="Alyssa_L">Alyssa L</option>
+	  <option value="Alyssa_T">Alyssa T</option>
+	  <option value="Ashley_Kai">Ashley Kai</option>
+	  <option value="Britteny_S">Britteny S</option>
+	  <option value="Caitlyn_W">Caitlyn W</option>
+	  <option value="Chad_R">Chad R</option>
+	  <option value="Diane_Ngo">Diane Ngo</option>
+	  <option value="Erin_B">Erin B</option>
+	  <option value="Gina G">Gina G</option>
+	  <option value="Hesham">Hesham</option>
+	  <option value="Jade_X">Jade X</option>
+	  <option value="Jennifer_Yo">Jennifer Yo</option>
+	  <option value="Jennifer_Z">Jennifer Z</option>
+	  <option value="Jill_T">Jill T</option>
+	  <option value="Jodi_H">Jodi H</option>
+	  <option value="John_H">John H</option>
+	  <option value="Joy_M">Joy M</option>
+	  <option value="Jules_F">Jules F</option>
+	  <option value="Julia_Pa">Juila Pa</option>
+	  <option value="June_Ki">June Ki</option>
+	  <option value="Kate_N">Kate N</option>
+	  <option value="Kathleen_C">Kathleen C</option>
+	  <option value="Katie_Po">Katie Po</option>
+	  <option value="Kelly_Lau">Kelly Lau</option>
+	  <option value="Kelsey_S">Kelsey S</option>
+	  <option value="Lauren_Fo">Lauren Fo</option>
+	  <option value="Lily_Ks">Lily Ks</option>
+	  <option value="Megan_Holt">Megan Holt</option>
+	  <option value="Melissa_Lo">Melissa Lo</option>
+	  <option value="Michael_Me">Michael Me</option>
+	  <option value="Molly_Me">Molly Me</option>
+	  <option value="Mythri_J">Mythri J</option>
+	  <option value="Nikki_B">Nikki B</option>
+	  <option value="Pat_Ch">Pat Ch</option>
+	  <option value="Patrice_Tr">Patrice Tr</option>
+	  <option value="Sabrina_Pa">Sabrina Pa</option>
+	  <option value="Sandy_R">Sandy R</option>
+	  <option value="Sarah_Brown">Sarah Brown</option>
+	  <option value="Shannon_D">Shannon D</option>
+	  <option value="Sveta_Kr">Sveta Kr</option>
+	  <option value="Sydney_Em">Sydney Em</option>
+	  <option value="Tania_Sw">Tania Sw</option>
+	  <option value="Taylor_S">Taylor S</option>
+	  <option value="Theresa_Wa">Theresa Wa</option>
+	  <option value="Todd_M">Todd M</option>
+	  <option value="Tracy_V">Tracy V</option>
+	  <option value="Trish_Du">Trish Du</option>
+	  <option value="Wendy_Co">Wendy Co</option>
+	  <option value="Wendy_Luc">Wendy Luc</option>
+	</select>
+	</p>
+
+
+	Class:<br>
+	<input type="radio" name="type" value="C1">C1 Yoga<br>
+	<input type="radio" name="type" value="C2">C2 Yoga<br>
+	<input type="radio" name="type" value="YS">Yoga Sculpt<br>
+
+
+	<br>
+
+	Feeling:
+	<input type="text" name="emoji_feeling" size ="1">
+
+	<br>
+	<br>
+
+	Progress: <br><br>
+	<input type="radio" name="progress" value="better"><font size="6">&#128077</font><br><br>
+	<input type="radio" name="progress" value="same"><font size="6">🧘</font><br><br>
+	<input type="radio" name="progress" value="worse"><font size="6">&#128078</font><br><br>
+	<input type="submit" value="Submit" id="submit">
+</form>
+
+</body>
+</html>
